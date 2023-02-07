@@ -16,6 +16,19 @@ Running Locally:
 ```
 GET localhost:8000/customer/1/reward
 ```
+
+Response:
+```json
+{
+    "customerId": 1,
+    "rewards": {
+        "2023 January": 90,
+        "2023 February": 1200,
+        "2022 December": 180
+    },
+    "total": 1470
+}
+```
 NOTE: Data only available for Customer ID: 1
 
 Assumptions:
