@@ -44,12 +44,12 @@ There are 2 entity classes that represents two database tables (Customer and Tra
 
 There is a helper POJO class that holds intermediate data i.e. `Reward`
 
-Repository: 
+- `com.shailesh.rewards.rewardcalculatordemo.repository:` 
 This package holds interfaces that extends `JpaRepository`. We use these interfaces in our services to provide business specific data manipulation and read operations.
 
-Service:
+- `com.shailesh.rewards.rewardcalculatordemo.service:`
 Holds all the service classes that define the business specific Data Access Layer.
 
-Controller:
+- `com.shailesh.rewards.rewardcalculatordemo.controller:`
 Holds REST API definition along with the URI and the HTTP method for exposed HTTP endpoints.
 
