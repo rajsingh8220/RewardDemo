@@ -15,7 +15,7 @@ public class Reward {
     private Integer rewardPoint;
 
     public String getRewardMonth(){
-        SimpleDateFormat simpleformat = new SimpleDateFormat("YYYY MMMM");
+        SimpleDateFormat simpleformat = new SimpleDateFormat("yyyy MMMM");
         return simpleformat.format(this.rewardDate);
     }
 }

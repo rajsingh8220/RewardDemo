@@ -22,33 +22,35 @@ public class CustomerService{
 
     public Map<String, Integer> getRewardsByCustId(long id) {
         List<Reward> rewardList = new ArrayList<>();
+        Map<String, Integer> resultMap = null;
         Optional<Customer> customer = customerRepository.findById(id);
-        List<Transaction> transactions = customer.get().getTransactions();
 
-        transactions.forEach(transaction -> {
-            Integer reward = 0;
-            if(transaction.getTransactionAmount()>100){
-                reward = (int) (reward+((transaction.getTransactionAmount()-100)*2)+50);
-            }
-            else if(transaction.getTransactionAmount()<100 && transaction.getTransactionAmount()>50){
-                reward = (int) (reward+(transaction.getTransactionAmount()-50));
-            }
-            else{
-                reward=0;
-            }
-            rewardList.add(new Reward(transaction.getCreateAt(), reward));
-        });
+        if(customer.isPresent()) {
+            List<Transaction> transactions = customer.get().getTransactions();
 
-        System.out.println(rewardList);
-        Map<String, Integer> resultMap = rewardList.stream()
-                .collect(
-                        Collectors.groupingBy(
-                                Reward::getRewardMonth,
-                                Collectors.summingInt(Reward::getRewardPoint)
-                        )
-                );
+            transactions.forEach(transaction -> {
+                Integer reward = 0;
+                if (transaction.getTransactionAmount() > 100) {
+                    reward = (int) (reward + ((transaction.getTransactionAmount() - 100) * 2) + 50);
+                } else if (transaction.getTransactionAmount() < 100 && transaction.getTransactionAmount() > 50) {
+                    reward = (int) (reward + (transaction.getTransactionAmount() - 50));
+                } else {
+                    reward = 0;
+                }
+                rewardList.add(new Reward(transaction.getCreateAt(), reward));
+            });
+
+            resultMap = rewardList.stream()
+                    .collect(
+                            Collectors.groupingBy(
+                                    Reward::getRewardMonth,
+                                    Collectors.summingInt(Reward::getRewardPoint)
+                            )
+                    );
 
 
+
+        }
         return resultMap;
     }
 }
