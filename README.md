@@ -10,7 +10,7 @@ Dependencies:
 - Java 1.8
 - Springboot 2.7.8
 
-Running Locally:
+### Running on Localhost:
 - Run the main application (`RewardCalculatorDemoApplication`)
 - Make a Get Request using any HTTP client application:
 ```
@@ -31,6 +31,9 @@ Response:
 ```
 NOTE: Data only available for Customer ID: 1
 
-Assumptions:
+### Assumptions:
 - Database will have only last 3 months of transactions and not old data will be available in the transactions table.
 - Code coverage/Unit Tests are not defined (One minor Junit has been done.)
+
+
+### Developer Note:

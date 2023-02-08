@@ -1,12 +1,10 @@
-package com.shailesh.rewards.rewardcalculatordemo.model;
+package com.shailesh.rewards.rewardcalculatordemo.helper;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.text.SimpleDateFormat;
-import java.time.Month;
-import java.util.Calendar;
 import java.util.Date;
 
 @Data

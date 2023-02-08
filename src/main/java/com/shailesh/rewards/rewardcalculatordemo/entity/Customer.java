@@ -1,4 +1,4 @@
-package com.shailesh.rewards.rewardcalculatordemo.model;
+package com.shailesh.rewards.rewardcalculatordemo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +23,7 @@ public class Customer {
     private String firstName;
     private String lastName;
 
-    @OneToMany(targetEntity=Transaction.class)
+    @OneToMany(targetEntity= Transaction.class)
     @JoinColumn(name="customerId")
     private List<Transaction> transactions = new ArrayList<>();
 

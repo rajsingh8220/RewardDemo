@@ -1,15 +1,11 @@
 package com.shailesh.rewards.rewardcalculatordemo.controller;
 
-import com.shailesh.rewards.rewardcalculatordemo.model.Customer;
-import com.shailesh.rewards.rewardcalculatordemo.model.Reward;
-import com.shailesh.rewards.rewardcalculatordemo.model.Transaction;
 import com.shailesh.rewards.rewardcalculatordemo.response.CustomerRewardResponse;
 import com.shailesh.rewards.rewardcalculatordemo.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/customer")

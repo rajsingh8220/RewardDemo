@@ -1,8 +1,8 @@
 package com.shailesh.rewards.rewardcalculatordemo.service;
 
-import com.shailesh.rewards.rewardcalculatordemo.model.Customer;
-import com.shailesh.rewards.rewardcalculatordemo.model.Reward;
-import com.shailesh.rewards.rewardcalculatordemo.model.Transaction;
+import com.shailesh.rewards.rewardcalculatordemo.entity.Customer;
+import com.shailesh.rewards.rewardcalculatordemo.helper.Reward;
+import com.shailesh.rewards.rewardcalculatordemo.entity.Transaction;
 import com.shailesh.rewards.rewardcalculatordemo.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
