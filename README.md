@@ -37,3 +37,19 @@ NOTE: Data only available for Customer ID: 1
 
 
 ### Developer Note:
+Entities:
+There are 2 entity classes that represents two database tables (Customer and Transaction). Each customer will have multiple transaction so entities maintain OneToMany relation.
+- Customer
+- Transaction
+
+There is a helper POJO class that holds intermediate data i.e. `Reward`
+
+Repository: 
+This package holds interfaces that extends `JpaRepository`. We use these interfaces in our services to provide business specific data manipulation and read operations.
+
+Service:
+Holds all the service classes that define the business specific Data Access Layer.
+
+Controller:
+Holds REST API definition along with the URI and the HTTP method for exposed HTTP endpoints.
+
